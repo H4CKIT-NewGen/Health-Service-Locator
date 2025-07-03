@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const mapRoutes = require("./routes/mapRoutes");
 
 //File router paths
 const testerRoute = require("./routes/testerRoute");
@@ -12,9 +13,11 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-
+ 
 // Routes
 app.use("/api/test", testerRoute);
+app.use("/api/maps", mapRoutes);
+
 
 
 

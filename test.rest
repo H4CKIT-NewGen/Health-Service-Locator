@@ -1,0 +1,58 @@
+### Testing the Geolocation Functionality
+GET http://localhost:5000/api/maps/geocode?location=kileleshwa,nairobi
+
+### Only county
+GET http://localhost:5000/api/maps/geocode?county=Kefecece
+
+### Location and county
+GET http://localhost:5000/api/maps/geocode?county=Nairobi&location=ttgtgg
+
+### set Service
+POST http://localhost:5000/api/maps/set-service
+Content-Type: application/json
+
+{
+  "sessionId": "test123",
+  "service": "hospital"
+}
+
+### Check County
+POST http://localhost:5000/api/maps/check-county
+Content-Type: application/json
+
+{
+  "sessionId": "test123",
+  "county": "Nairobi"
+}
+
+### Check Location
+POST http://localhost:5000/api/maps/check-location
+Content-Type: application/json
+
+{
+  "sessionId": "test123",
+  "county": "Nairobi",
+  "location": "Kileleshwa"
+}
+
+### Check Landmark
+POST http://localhost:5000/api/maps/check-landmark
+Content-Type: application/json
+
+{
+  "sessionId": "test123",
+  "county": "Nairobi",
+  "landmark": "Karen Blixen Museum"
+}
+
+
+### Find Facilities
+POST http://localhost:5000/api/maps/find-facilities
+Content-Type: application/json
+
+{
+  "sessionId": "test123"
+}
+
+### Get Session Data
+GET http://localhost:5000/api/maps/session?sessionId=test123
