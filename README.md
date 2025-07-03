@@ -88,7 +88,7 @@ Users interact with the system via **USSD menus** and receive health facility de
 ### Installation
 
 ```bash
-git clone https://github.com/yourusername/health-service-locator.git
+git clone https://github.com/H4CKIT-NewGen/health-service-locator.git
 cd health-service-locator
 npm install
 ```
