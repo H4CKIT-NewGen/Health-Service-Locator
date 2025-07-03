@@ -4,6 +4,45 @@ A lightweight, offline-accessible system that helps Kenyan citizens locate nearb
 
 ---
 
+---
+
+## 📁 Project Structure
+
+```
+health-service-locator/
+│
+├── controller/      # Contains business logic and request handlers for routes
+├── routes/          # Express route definitions (e.g., USSD, test endpoints)
+│   └── testerRoute.js
+├── utils/           # Utility/helper functions (e.g., validation, formatting)
+├── server.js        # Main Express server entry point
+├── package.json     # Project metadata and dependencies
+├── README.md        # Project documentation
+```
+
+### Folder & File Descriptions
+
+- **controller/**  
+  Place all controller files here. Each file should export functions that handle the main logic for different routes (e.g., processing USSD requests, interacting with APIs).
+
+- **routes/**  
+  Contains route files that define Express endpoints and connect them to controllers.  
+  Example: `testerRoute.js` defines a test endpoint for health checks.
+
+- **utils/**  
+  Utility functions and helpers used throughout the project (e.g., input validation, formatting, external API wrappers).
+
+- **server.js**  
+  The main entry point for the backend server. Sets up Express, middleware, and routes.
+
+- **package.json**  
+  Lists project dependencies, scripts, and metadata.
+
+- **README.md**  
+  This documentation file.
+
+---
+
 ## 📱 How It Works
 
 Users interact with the system via **USSD menus** and receive health facility details via **SMS**. The system processes input intelligently, uses **Google Maps APIs** to find relevant hospitals and clinics, and communicates via the **Africa’s Talking API**.
@@ -89,7 +128,13 @@ Users interact with the system via **USSD menus** and receive health facility de
 
 ```bash
 git clone https://github.com/H4CKIT-NewGen/health-service-locator.git
+```
+
+```bash
 cd health-service-locator
+```
+
+```bash
 npm install
 ```
 
@@ -110,11 +155,6 @@ SESSION_SECRET=your_session_secret
 npm start
 ```
 
-For development with hot reload:
-
-```bash
-npm run dev
-```
 
 ---
 

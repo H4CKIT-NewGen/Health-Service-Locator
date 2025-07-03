@@ -1,0 +1,24 @@
+{
+  "name": "health-service-locator",
+  "version": "1.0.0",
+  "description": "A lightweight, offline-accessible system that helps Kenyan citizens locate nearby health facilities using any mobile phone—**no internet or smartphone required**.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "africastalking": "^0.7.3",
+    "axios": "^1.10.0",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.0.1",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
